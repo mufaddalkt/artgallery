@@ -1,0 +1,218 @@
+/** Museum catalogue metadata with independently written interpretive text.
+ * Image rights are recorded per reproduction, not inferred from the artist's dates.
+ * All local derivatives preserve the supplied image proportions and colour.
+ */
+export interface Artwork {
+  id: string;
+  title: string;
+  artist: string;
+  date: string;
+  period: string;
+  medium: string;
+  collection: string;
+  description: string;
+  story: string;
+  fact: string;
+  sourceUrl: string;
+  imageSourceUrl: string;
+  license: string;
+  licenseUrl: string;
+  credit: string;
+  imageChanges: string;
+  image: string;
+  thumbnail: string;
+  width: number;
+  height: number;
+  alt: string;
+}
+
+const publicDomain = 'Public domain · Wikimedia Commons PD-Art';
+const publicDomainUrl = 'https://creativecommons.org/publicdomain/mark/1.0/';
+const imageChanges = 'Resized and JPEG-compressed for this gallery; no cropping or colour changes.';
+
+export const artworks: Artwork[] = [
+  {
+    id: 'mona-lisa',
+    title: 'Mona Lisa',
+    artist: 'Leonardo da Vinci',
+    date: '1503–1519',
+    period: 'High Renaissance',
+    medium: 'Oil on poplar panel',
+    collection: 'Musée du Louvre, Paris',
+    description: 'A quiet figure meets our gaze while an immense, winding landscape opens behind her. Leonardo softens the edges of the face until light seems to pass into shadow without a boundary. The folded hands bring stillness to the composition; the elusive smile leaves the encounter beautifully unresolved.',
+    story: 'The sitter is Lisa Gherardini, wife of the Florentine merchant Francesco del Giocondo. Leonardo began the portrait around 1503 and continued working on it over many years, taking it with him rather than delivering a conventional finished commission. The Louvre dates the work to 1503–1519. Its remarkable presence comes partly from sfumato: extremely fine layers of paint soften outlines and build almost imperceptible transitions between light and shade. Look at the corners of the mouth, then at the hands. The same patient attention turns the surface of a wooden panel into a convincing impression of living skin.',
+    fact: 'The Louvre dates the painting to 1503–1519, reflecting Leonardo’s years of continued work on it.',
+    sourceUrl: 'https://collections.louvre.fr/ark:/53355/cl010062370',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg',
+    license: publicDomain,
+    licenseUrl: publicDomainUrl,
+    credit: 'Leonardo da Vinci / Musée du Louvre. C2RMF reproduction; public-domain derivative by Dcoetzee, via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/mona-lisa.jpg',
+    thumbnail: '/artworks/mona-lisa-small.jpg',
+    width: 1289,
+    height: 1920,
+    alt: 'Mona Lisa sits with folded hands in a dark dress before a misty landscape of winding roads, water and mountains.',
+  },
+  {
+    id: 'starry-night',
+    title: 'The Starry Night',
+    artist: 'Vincent van Gogh',
+    date: 'June 1889',
+    period: 'Post-Impressionism',
+    medium: 'Oil on canvas',
+    collection: 'The Museum of Modern Art, New York',
+    description: 'A sleeping village rests beneath a sky that seems to breathe. Blue currents coil around brilliant stars and a luminous moon, while a dark cypress rises like a flame. The short, visible brushstrokes make the night feel restless and alive, setting the stillness below against the movement overhead.',
+    story: 'Van Gogh painted this work while staying at Saint-Paul-de-Mausole in Saint-Rémy, drawing inspiration from the view outside his window. Yet the canvas is more than a record of that view. The village was assembled from other observations, and the cypress appears closer than it was. Although the subject is night, he worked on the painting during daylight. Observation and invention meet in the radiant sky: the bright celestial body left of centre is Venus, while swirling forms turn the atmosphere into expressive movement. Let your eyes follow a single brushstroke, then step back to watch those marks gather into light.',
+    fact: 'Van Gogh painted this night scene in several sessions during the day.',
+    sourceUrl: 'https://www.moma.org/collection/works/79802',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg',
+    license: publicDomain,
+    licenseUrl: publicDomainUrl,
+    credit: 'Vincent van Gogh / The Museum of Modern Art. Google Art Project reproduction, via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/starry-night.jpg',
+    thumbnail: '/artworks/starry-night-small.jpg',
+    width: 1920,
+    height: 1520,
+    alt: 'Swirling blue night sky filled with bright stars above a village, with a tall dark cypress at the left.',
+  },
+  {
+    id: 'girl-with-a-pearl-earring',
+    title: 'Girl with a Pearl Earring',
+    artist: 'Johannes Vermeer',
+    date: 'c. 1665',
+    period: 'Dutch Golden Age',
+    medium: 'Oil on canvas',
+    collection: 'Mauritshuis, The Hague',
+    description: 'A young woman turns toward us, her lips slightly parted, as though we have interrupted a thought. A blue and yellow turban catches the light above a luminous face. Against the dark background, the pearl is a small, astonishing illusion: a few touches of paint become a shining object.',
+    story: 'The Mauritshuis identifies this painting as a tronie, a study of a character or imagined type, rather than a portrait made to preserve a particular person’s likeness. The unusual costume gives Vermeer freedom to explore colour and light. Soft transitions shape the face, while thicker paint describes the white collar. The blue turban contains costly ultramarine pigment. Most remarkably, the oversized pearl is suggested by just two principal strokes: a bright highlight and a softer reflection underneath. There is no visible hook. The image invites us to see how little a painter needs to make something feel entirely present.',
+    fact: 'The pearl is formed mainly from two strokes of white paint, with no visible hook.',
+    sourceUrl: 'https://www.mauritshuis.nl/en/our-collection/artworks/670-girl-with-a-pearl-earring',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg',
+    license: publicDomain,
+    licenseUrl: publicDomainUrl,
+    credit: 'Johannes Vermeer / Mauritshuis, The Hague. Public-domain reproduction via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/girl-with-a-pearl-earring.jpg',
+    thumbnail: '/artworks/girl-with-a-pearl-earring-small.jpg',
+    width: 1621,
+    height: 1920,
+    alt: 'A young woman in a blue and yellow turban turns toward the viewer; a bright pearl earring shines against the dark background.',
+  },
+  {
+    id: 'night-watch',
+    title: 'The Night Watch',
+    artist: 'Rembrandt van Rijn',
+    date: '1642',
+    period: 'Dutch Golden Age',
+    medium: 'Oil on canvas',
+    collection: 'Rijksmuseum, Amsterdam',
+    description: 'Light falls across a company of civic guards as they gather amid weapons, banners and movement. The captain’s outstretched hand seems to reach beyond the painted surface. Rembrandt gives a group portrait the tension of an unfolding scene, letting faces and gestures emerge from deep, warm shadow.',
+    story: 'This monumental painting brings Captain Frans Banninck Cocq and his company of civic guards into a shared moment of action. Look past the two central officers: a weapon is loaded at the left, another is fired near the middle, and a third is cleaned at the right. Even the captain’s shadow participates in the story, falling across his lieutenant’s pale clothing. The painting has also lived a dramatic physical history. When moved to Amsterdam’s Town Hall in 1715, it was trimmed to fit between two doors. Those missing strips have never been found, permanently changing the balance of Rembrandt’s original composition.',
+    fact: 'Four strips were cut from the canvas in 1715 so it would fit between two doors.',
+    sourceUrl: 'https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-rembrandt-s-night-watch',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:The_Night_Watch.jpg',
+    license: publicDomain,
+    licenseUrl: publicDomainUrl,
+    credit: 'Rembrandt van Rijn / Rijksmuseum, Amsterdam. Hyper-resolution reproduction, via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/night-watch.jpg',
+    thumbnail: '/artworks/night-watch-small.jpg',
+    width: 1920,
+    height: 1609,
+    alt: 'A large company of civic guards with muskets and a flag emerges from darkness around two brightly lit officers.',
+  },
+  {
+    id: 'birth-of-venus',
+    title: 'The Birth of Venus',
+    artist: 'Sandro Botticelli',
+    date: 'c. 1485',
+    period: 'Early Renaissance',
+    medium: 'Tempera on canvas',
+    collection: 'Uffizi Galleries, Florence',
+    description: 'Venus stands on a great shell as wind carries roses across the sea. At the shore, a figure waits with a flowered cloak. Botticelli’s flowing contours connect hair, drapery and waves, giving the scene a gentle rhythm. The goddess feels suspended between the natural world and an imagined ideal.',
+    story: 'Despite its familiar title, this painting shows Venus arriving on the island of Cyprus after her birth from the sea. Zephyr blows her toward the shore; the figure beside him may be Aura. A waiting woman, sometimes identified as the Hora of spring, offers a cloak. The Uffizi considers a Medici commission probable, although the early history remains uncertain. Botticelli draws on classical sculpture for Venus’s pose and uses gold to catch the light in her hair. Painted in tempera on canvas, the work turns an ancient myth into a vision of beauty shaped by the culture of Renaissance Florence.',
+    fact: 'The scene represents Venus arriving at Cyprus, rather than the moment of her birth.',
+    sourceUrl: 'https://www.uffizi.it/en/artworks/birth-of-venus',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project.jpg',
+    license: publicDomain,
+    licenseUrl: publicDomainUrl,
+    credit: 'Sandro Botticelli / Uffizi Galleries, Florence. Google Art Project reproduction, via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/birth-of-venus.jpg',
+    thumbnail: '/artworks/birth-of-venus-small.jpg',
+    width: 1920,
+    height: 1206,
+    alt: 'Venus stands on a scallop shell on the sea, blown toward shore by two wind figures while a woman holds out a flowered cloak.',
+  },
+  {
+    id: 'grande-jatte',
+    title: 'A Sunday on La Grande Jatte — 1884',
+    artist: 'Georges Seurat',
+    date: '1884–1886; border added 1888–1889',
+    period: 'Neo-Impressionism',
+    medium: 'Oil on canvas',
+    collection: 'Art Institute of Chicago',
+    description: 'Parisians gather beside the Seine in an afternoon of extraordinary stillness. Parasols, hats and upright figures form a measured pattern across the grass. Move closer and the apparently solid scene becomes a field of tiny touches of colour. At a distance, those separate marks gather into shimmering light.',
+    story: 'Seurat spent two years developing this scene through numerous drawings, small panels and larger studies. The park is on an island in the Seine, just beyond nineteenth-century Paris. His figures look contemporary, yet their measured arrangement recalls the solemn rhythm of an ancient frieze. Colour is equally deliberate: neighbouring touches remain distinct on the surface while interacting in the viewer’s eye. When the canvas appeared at the final Impressionist exhibition in 1886, its method announced a new direction, Neo-Impressionism. Seurat later extended his experiment into the dotted border, making even the edge of the painting part of its colour relationships.',
+    fact: 'Seurat was 26 when the painting appeared at the final Impressionist exhibition in 1886.',
+    sourceUrl: 'https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg',
+    license: publicDomain,
+    licenseUrl: publicDomainUrl,
+    credit: 'Georges Seurat / Art Institute of Chicago, Helen Birch Bartlett Memorial Collection. Google Art Project reproduction, via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/grande-jatte.jpg',
+    thumbnail: '/artworks/grande-jatte-small.jpg',
+    width: 1920,
+    height: 1278,
+    alt: 'People with parasols and hats stand and sit beneath trees beside the Seine, rendered in many small coloured dots.',
+  },
+  {
+    id: 'the-scream',
+    title: 'The Scream',
+    artist: 'Edvard Munch',
+    date: '1893',
+    period: 'Symbolism · early Expressionism',
+    medium: 'Tempera and wax crayon on cardboard',
+    collection: 'National Museum, Oslo',
+    description: 'A figure presses its hands to its head beneath a sky of red and orange waves. The landscape bends around the open mouth, while two distant people continue along the path. Munch makes feeling visible through colour and contour: the whole scene seems to vibrate with a shared, unsettling intensity.',
+    story: 'Munch connected this image to a written account of walking with friends when the sunset turned the sky red and he sensed a scream passing through nature. The view is recognisable as the Oslo fjord seen from Ekeberg. Instead of describing the scene literally, he reshaped it around an emotional experience. The anonymous foreground figure gives that experience an immediate human focus, while the flowing landscape carries it outward. This is the National Museum’s 1893 painting; Munch also made other versions in paint, pastel and print. Its radical union of feeling and form helped prepare the way for twentieth-century Expressionism.',
+    fact: 'This is the 1893 National Museum version; Munch also revisited the motif in other media and versions.',
+    sourceUrl: 'https://www.nasjonalmuseet.no/en/collection/object/NG.M.00939',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_The_Scream_-_NG.M.00939_-_National_Museum_of_Art,_Architecture_and_Design.jpg',
+    license: 'CC BY 4.0 · digital reproduction',
+    licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    credit: 'Edvard Munch / Nasjonalmuseet, Oslo. Photo: Børre Høstland. CC BY 4.0, via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/the-scream.jpg',
+    thumbnail: '/artworks/the-scream-small.jpg',
+    width: 1546,
+    height: 1920,
+    alt: 'A figure with an open mouth holds its head beside a railing, under a red-orange sky above a dark blue fjord.',
+  },
+  {
+    id: 'the-bedroom',
+    title: 'The Bedroom',
+    artist: 'Vincent van Gogh',
+    date: 'September 1889',
+    period: 'Post-Impressionism',
+    medium: 'Oil on canvas',
+    collection: 'Art Institute of Chicago',
+    description: 'An ordinary bedroom becomes a world of strong colour and gently tilting lines. A wooden bed, two chairs and a small table fill the intimate space. Pictures hang above the pillows, and the window is closed. The familiar objects feel carefully chosen, holding the room together like a memory of home.',
+    story: 'This canvas is the second of three painted versions of Van Gogh’s room in the Yellow House at Arles. He made the first in 1888, soon after moving into a place that felt like a home of his own. When that painting suffered water damage, his brother Theo suggested a new version before the original underwent treatment. Van Gogh painted this canvas in September 1889 while staying at Saint-Rémy. Although it repeats the earlier composition at the same scale, its details are distinct. A smaller third version followed for his family, turning a private room into a subject he returned to with care.',
+    fact: 'The Chicago painting is the second of three versions, made after water damaged the original.',
+    sourceUrl: 'https://www.artic.edu/artworks/28560/the-bedroom',
+    imageSourceUrl: 'https://commons.wikimedia.org/wiki/File:Van_Gogh_-_The_Bedroom,_1889_Chicago.jpg',
+    license: publicDomain,
+    licenseUrl: publicDomainUrl,
+    credit: 'Vincent van Gogh / Art Institute of Chicago, Helen Birch Bartlett Memorial Collection. Reproduction via Wikimedia Commons.',
+    imageChanges,
+    image: '/artworks/the-bedroom.jpg',
+    thumbnail: '/artworks/the-bedroom-small.jpg',
+    width: 1920,
+    height: 1531,
+    alt: 'A bedroom with pale blue walls, a yellow wooden bed, red bedcover, two chairs, a small table and framed pictures.',
+  },
+];

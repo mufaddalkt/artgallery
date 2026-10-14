@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.sites-runtime/
+*.tsbuildinfo
+.openai/
+.vercel/
+.env
+.env.*
+!.env.example
